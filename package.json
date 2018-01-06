@@ -1,0 +1,15 @@
+{
+  "name": "0c12fc2fde57c0bb095e7dd874dfcb13",
+  "version": "0.3.0",
+  "main": "index.js",
+  "repository": "https://gist.github.com/ikeyan/0c12fc2fde57c0bb095e7dd874dfcb13.git",
+  "author": "池下克彦 <ikeshita.katsuhiko@unipro.co.jp>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-env": "^3.2.4",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "safe-eval": "^0.3.0",
+    "ua-string": "^1.1.0"
+  }
+}
