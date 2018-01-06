@@ -5,6 +5,8 @@ if [[ $1 != --pulled ]]; then
 fi
 shift
 
+DRYRUN=$(if [[ $1 = --dry-run || $1 = -n ]]; then echo --dry-run; fi)
+
 generate() {
     NEW_VERSION=$(node -e 'console.log(require("./package.json").version)')
     (cat <<JS
@@ -26,7 +28,7 @@ JS
 }
 
 set -x
-npm install
+npm install --no-package-lock
 generate
 if ! diff -q index.js index-new.js; then
     echo diff exists
@@ -39,9 +41,9 @@ if ! diff -q index.js index-new.js; then
     fi
     diff --color index.js index-new.js
     mv index-new.js index.js
-    git add index.js package.json package-lock.json
+    git add index.js package.json
     git commit -m "Updated index.js to v$NEW_VERSION"
     git tag "v$NEW_VERSION"
-    git push
-    git push --tags
+    git push $DRYRUN
+    git push --tags $DRYRUN
 fi
