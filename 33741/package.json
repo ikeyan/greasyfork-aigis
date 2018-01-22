@@ -1,0 +1,9 @@
+{
+  "name": "千年戦争アイギス・御城プロジェクト:RE 隠れてる時ミュート",
+  "version": "0.3.3",
+  "main": "index.js",
+  "repository": "https://github.com/ikeyan/greasyfork-aigis.git",
+  "author": "ikeyan <katuhiko.ikesita@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
+}

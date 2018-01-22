@@ -1,10 +1,3 @@
-if [[ $1 != --pulled ]]; then
-    git pull
-    bash "$0" --pulled "$@"
-    exit
-fi
-shift
-
 DRYRUN=$(if [[ $1 = --dry-run || $1 = -n ]]; then echo --dry-run; fi)
 
 generate() {
@@ -16,7 +9,7 @@ generate() {
 // @version      $NEW_VERSION
 // @description  タブが隠れてる時やウィンドウが最小化しているときに消音します。
 // @author       ikeyan
-$(node generate-aigis-matches.js)
+$(node ../generate-aigis-matches.js)
 // @match        http://assets.shiropro-re.net/html/Oshiro.html
 // @grant        none
 // @run-at       document-start
