@@ -1,3 +1,5 @@
+set -e
+
 if [[ $1 != --pulled ]]; then
     git pull
     bash "$0" --pulled "$@"

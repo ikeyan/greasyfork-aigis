@@ -1,3 +1,4 @@
+set -e
 DRYRUN=$(if [[ $1 = --dry-run || $1 = -n ]]; then echo --dry-run; fi)
 
 generate() {
@@ -32,11 +33,11 @@ if ! diff -q index.js index-new.js; then
         echo "regenerate"
         generate
     fi
-    diff --color index.js index-new.js
+    diff --color index.js index-new.js || :
     mv index-new.js index.js
     git add index.js package.json
     git commit -m "Updated index.js to v$NEW_VERSION"
-    git tag "v$NEW_VERSION"
+    git tag -f "v$NEW_VERSION"
     git push $DRYRUN
     git push --tags $DRYRUN
 fi
