@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         千年戦争アイギス・御城プロジェクト:RE 隠れてる時ミュート
 // @namespace    https://greasyfork.org/users/5795-ikeyan
-// @version      0.3.5
+// @version      0.3.6
 // @description  タブが隠れてる時やウィンドウが最小化しているときに消音します。
 // @author       ikeyan
-// @match        http://assets.millennium-war.net/51d878677132237b43079b90e7293b1f651ca150/979833d9a1a324291f191469ccd47734
-// @match        http://assets.millennium-war.net/51d878677132237b43079b90e7293b1f651ca150/8382754a26553f19a0969791aa65028f
+// @match        http://assets.millennium-war.net/5fe0d21577755db3072156ad2f6638f2b194de95/ee62ac3ad283cfd9567fe97f5718c43a
+// @match        http://assets.millennium-war.net/5fe0d21577755db3072156ad2f6638f2b194de95/c895a3562c932cff07e9c831a22c1371
 // @match        http://assets.shiropro-re.net/html/Oshiro.html
 // @grant        none
 // @run-at       document-start
